@@ -1,0 +1,102 @@
+.whatContainer {
+    width: 70%;
+    height: 26em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 2em;
+    border-bottom: 2px solid #00371c ;
+}
+
+.whatLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.textHead{
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5em;
+  color: #00371c;
+}
+
+.whatHeadL {
+    font-size: 1.4em;
+    font-weight: 500;
+    font-style: italic;
+    color: #00371c;
+}
+
+.whatRight {
+    width: 50%;
+}
+
+.whatBio {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.5em;
+    text-align: justify;
+    color: #00371c;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .whatContainer {
+    /* flex-direction: column; */
+    padding: 4%;
+    width: 90%;
+  }
+  
+  .textHead {
+    font-size: 2em;
+  }
+  .whatHeadL, .whatBio {
+    font-size: 2vw;
+  }
+}
+
+/* Medium screens (max-width: 992px) */
+@media (max-width: 992px) {
+    .whatContainer {
+      padding: 4%;
+    }
+  
+    .textHead {
+      font-size: 3vw;
+    }
+    .whatHeadL, .whatBio {
+      font-size: 2.3vw;
+    }
+  }
+  
+  /* Small screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .whatContainer {
+      width: 100%;
+    }
+
+    .textHead {
+      font-size: 4.5vw;
+    }
+  
+    .whatHeadL, .whatBio {
+      font-size: 3.6vw;
+    }
+  }
+  
+  /* Extra small screens (max-width: 576px) */
+  @media (max-width: 576px) {
+    .whatHeadL {
+      font-size: 4.5vw;
+    }
+  
+    .whatBio {
+      font-size: 4vw;
+    }
+  }

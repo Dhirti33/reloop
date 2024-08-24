@@ -1,0 +1,323 @@
+.heroContainer {
+  height: 37em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../images/reloop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  gap: 6em;
+  position: relative;
+}
+
+/* Back drop filter */
+.cover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  backdrop-filter: blur(5px);
+}
+
+/* -----Navigation bar----- */
+.navBar {
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+  background-color: #edfff5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em calc(1em + 10%);
+  align-self: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --Left side of the navBar-- */
+.Left {
+  height: 90%;
+  width: calc(40% + 5em);
+  display: flex;
+  flex-direction: row;
+  gap: calc(0.5em + 0.5%);
+  align-items: baseline;
+  align-self: center;
+}
+
+/* Site Logo */
+.reloopLogo {
+  height: 90%;
+  width: 2em;
+  align-self: center;
+}
+
+/* Site Name */
+.Name {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(2em - 5%);
+  text-align: center;
+  gap: 0.2em;
+}
+.Name > p {
+  display: contents;
+  font-size: 0.7em;
+  justify-content: end;
+  color: #076036;
+}
+
+/* --Right side of the navBar-- */
+.Right {
+  height: 80%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  align-self: center;
+  gap: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc(1.65em - 20%);
+  cursor: pointer;
+}
+
+.Right > div:hover {
+  font-size: 1em;
+  border-bottom: 2px solid #076036;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+
+
+/* .no-scroll {
+    overflow: hidden;
+  } */
+  
+
+/* -----Hero section----- */
+/* -----Catchphrase and Subtext----- */
+.hero {
+  z-index: 1;
+  margin: auto;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+/* --Text-- */
+.heroText {
+  width: 100%;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 3.9em;
+  text-shadow: #00371c;
+  color: #edfff5;
+  text-shadow: 0 0 10px 10px black;
+  text-align: justify;
+
+  text-shadow: 0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000;
+}
+
+/* Text header */
+.heroBody {
+  width: 100%;
+  height: 12em;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+  position: relative;
+  border-radius: 15px;
+}
+
+/* Text */
+.textBody {
+  width: 50%;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  text-align: justify;
+  color: #edfff5;
+  padding: 0.5em;
+  background-color: #70ffba79;
+  border-radius: 15px;
+  transform: skew(-6deg);
+}
+
+/* --Consulting Image-- */
+.heroImage {
+  position: absolute;
+  width: 50%;
+  height: 20em;
+  right: -10px;
+  border-radius: 10px;
+  transform: skew(-6deg);
+}
+
+/* Responsive Styles */
+
+/* Medium screens (min-width: 768px and max-width: 1199px) */
+@media (max-width: 1199px) {
+  .navBar {
+    padding: 0.5em calc(1em + 10%);
+  }
+  .heroText {
+    font-size: calc(2.5em + 20%);
+  }
+  .textBody {
+    font-size: 1.3em;
+  }
+  .heroImage {
+    width: 50%;
+    height: calc(20em - 20%);
+  }
+}
+
+@media (max-width: 992px) {
+  .heroBody {
+    height: 20em;
+    flex-direction: column;
+    align-items: normal;
+    gap: 1.5em;
+  }
+  
+  .textBody {
+    width: 50%;
+  }
+  .heroImage {
+    width: 50%;
+    height: 20em;
+    bottom: 35px;
+  }
+
+}
+
+/* Small screens (max-width: 767px) */
+@media (max-width: 768px) {
+  .navBar {
+    padding: 0.5em;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .Right {
+    display: none;
+  }
+  .heroText {
+    font-size: 2.2em;
+  }
+  .heroBody {
+    flex-direction: column;
+  }
+  .textBody {
+    font-size: 1.2em;
+    padding: 0.8em;
+  }
+  .Right.open {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    background-color: #edfff5;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: normal;
+    gap: 5em;
+    padding: 1em 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: x-large;
+  }
+}
+
+/* Extra small screens (max-width: 575px) */
+@media (max-width: 575px) {
+  .heroContainer {
+    gap: 4em;
+  }
+  .Name {
+    font-size: (2.5vw + 1em);
+  }
+  .heroText {
+    font-size: 1.8em;
+  }
+  .heroBody {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .textBody {
+    font-size: 1.1em;
+    padding: 0.7em;
+    width: 100%;
+
+    }
+  .heroImage {
+    height: 12em;
+    width: 100%;
+    top: 10px   ;
+    left: 0;
+    position: relative;
+
+  }
+
+  .Right.open {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    background-color: #edfff5;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: normal;
+    gap: 1em;
+    padding: 1em 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+}
